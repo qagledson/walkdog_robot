@@ -17,6 +17,7 @@ Library    OperatingSystem
 ...     botao_voltar_home=xpath://a[contains(.,'Voltar para home')]
 ...     botao_buscar_cep=xpath://input[@value='Buscar CEP']
 ...     botao_anexar=css:input[type="file"]
+...     botao_voltar=xpath://button[contains(.,'Voltar')]
 ...     botao_cadastrar=xpath://button[@class='button-register']
 ...     link_cuidar=xpath://li[contains(.,'Cuidar')]
 ...     link_adestrar=xpath://li[contains(.,'Adestrar')]
@@ -74,4 +75,6 @@ ENTÃO devo ver uma mensagem de sucesso informando Recebemos o seu cadastro e em
     Element Should Be Visible             ${cadastro.campo_mensagem}                
     Page Should Contain                   Recebemos o seu cadastro e em breve retornaremos o contato
     Capture Page Screenshot               cadastro_dog_walker_success.png
+    Wait Until Element Is Visible         ${cadastro.botao_voltar}
+    Click Element                         ${cadastro.botao_voltar} 
     Close Browser
