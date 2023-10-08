@@ -4,8 +4,9 @@ Resource    ../../resources/pages/cadastro_page.robot
 
 *** Test Cases ***
 Acessar o sistema
-    DADO QUE acesso o buger eats
-    E clico no botao de cadastro
-    QUANDO preencho os campos do cadastro
-    Sleep        2
+    [Documentation]        Teste de cadastro de usuário
+    DADO QUE acesso o walkdog
+    E que desejo me tornar Dog Walker
+    QUANDO submeto o formulário de cadastro com os meus dados pessoais
+    ENTÃO devo ver uma mensagem de sucesso informando Recebemos o seu cadastro e em breve retornaremos o contato
 

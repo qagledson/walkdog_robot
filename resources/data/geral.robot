@@ -3,5 +3,5 @@ Resource    ../main.robot
 
 *** Variables ***
 &{geral}
-...     url=https://buger-eats.vercel.app
-...     browser=chrome
+...     url=https://walkdog.vercel.app/
+...     browser=firefox

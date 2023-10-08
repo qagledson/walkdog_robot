@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.3 on win32)" generated="20231008 15:02:49.624" rpa="false" schemaversion="4">
+<suite id="s1" name="Cadastro" source="C:\Users\Gledson Nascimento\Documents\projetos\robot-framework\walkdog_robot\suites\cadastro\cadastro.robot">
+<test id="s1-t1" name="Acessar o sistema" line="6">
+<kw name="DADO QUE acesso o walkdog" library="home_page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${geral.url}</arg>
+<arg>${geral.browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231008 15:02:49.811" level="INFO">Opening browser 'firefox' to base url 'https://walkdog.vercel.app/'.</msg>
+<status status="PASS" starttime="20231008 15:02:49.811" endtime="20231008 15:02:55.965"/>
+</kw>
+<status status="PASS" starttime="20231008 15:02:49.810" endtime="20231008 15:02:55.965"/>
+</kw>
+<kw name="E que desejo me tornar Dog Walker" library="home_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home.botao_cadastre_se}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231008 15:02:55.966" level="INFO">Clicking element 'xpath://a[contains(.,'Quero ser Dog Walker')]'.</msg>
+<status status="PASS" starttime="20231008 15:02:55.966" endtime="20231008 15:02:56.236"/>
+</kw>
+<status status="PASS" starttime="20231008 15:02:55.965" endtime="20231008 15:02:56.236"/>
+</kw>
+<kw name="QUANDO submeto o formulário de cadastro com os meus dados pessoais" library="cadastro_page">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.campo_nome}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:02:56.237" endtime="20231008 15:02:56.247"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cadastro.campo_nome}</arg>
+<arg>${registro.nome_completo}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231008 15:02:56.248" level="INFO">Typing text 'João dos Testes' into text field 'xpath://input[@name='name']'.</msg>
+<status status="PASS" starttime="20231008 15:02:56.247" endtime="20231008 15:02:56.276"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.campo_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:02:56.276" endtime="20231008 15:02:56.285"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cadastro.campo_email}</arg>
+<arg>${registro.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231008 15:02:56.286" level="INFO">Typing text 'joao_teste@gmail.com' into text field 'xpath://input[@name='email']'.</msg>
+<status status="PASS" starttime="20231008 15:02:56.285" endtime="20231008 15:02:56.309"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.campo_cpf}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:02:56.310" endtime="20231008 15:02:56.318"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cadastro.campo_cpf}</arg>
+<arg>${registro.cpf}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231008 15:02:56.319" level="INFO">Typing text '99900099988' into text field 'xpath://input[@name='cpf']'.</msg>
+<status status="PASS" starttime="20231008 15:02:56.318" endtime="20231008 15:02:56.333"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.campo_cep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:02:56.333" endtime="20231008 15:02:56.341"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cadastro.campo_cep}</arg>
+<arg>${registro.cep}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231008 15:02:56.342" level="INFO">Typing text '63900217' into text field 'xpath://input[@name='cep']'.</msg>
+<status status="PASS" starttime="20231008 15:02:56.341" endtime="20231008 15:02:56.354"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.botao_buscar_cep}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:02:56.354" endtime="20231008 15:02:56.363"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cadastro.botao_buscar_cep}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231008 15:02:56.364" level="INFO">Clicking element 'xpath://input[@value='Buscar CEP']'.</msg>
+<status status="PASS" starttime="20231008 15:02:56.363" endtime="20231008 15:02:56.578"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231008 15:03:01.578" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231008 15:02:56.578" endtime="20231008 15:03:01.578"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.campo_rua}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:03:01.578" endtime="20231008 15:03:01.593"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${nome_rua}</var>
+<arg>${cadastro.campo_rua}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20231008 15:03:01.601" level="INFO">${nome_rua} = Rua Doutor Eudásio Barroso</msg>
+<status status="PASS" starttime="20231008 15:03:01.593" endtime="20231008 15:03:01.601"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${nome_rua}</arg>
+<arg>${registro.rua}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231008 15:03:01.601" endtime="20231008 15:03:01.601"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.campo_numero}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:03:01.601" endtime="20231008 15:03:01.609"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cadastro.campo_numero}</arg>
+<arg>${registro.numero}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231008 15:03:01.610" level="INFO">Typing text '012' into text field 'xpath://input[@name='addressNumber']'.</msg>
+<status status="PASS" starttime="20231008 15:03:01.609" endtime="20231008 15:03:01.618"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.campo_complemento}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:03:01.618" endtime="20231008 15:03:01.627"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${cadastro.campo_complemento}</arg>
+<arg>${registro.complemento}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231008 15:03:01.628" level="INFO">Typing text 'Apartamento' into text field 'xpath://input[@name='addressDetails']'.</msg>
+<status status="PASS" starttime="20231008 15:03:01.627" endtime="20231008 15:03:01.635"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.campo_bairro}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:03:01.636" endtime="20231008 15:03:01.643"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${nome_bairro}</var>
+<arg>${cadastro.campo_bairro}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20231008 15:03:01.651" level="INFO">${nome_bairro} = Centro</msg>
+<status status="PASS" starttime="20231008 15:03:01.643" endtime="20231008 15:03:01.651"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${nome_bairro}</arg>
+<arg>${registro.bairro}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231008 15:03:01.651" endtime="20231008 15:03:01.651"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.campo_cidade_uf}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:03:01.651" endtime="20231008 15:03:01.658"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${nome_cidade_uf}</var>
+<arg>${cadastro.campo_cidade_uf}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20231008 15:03:01.665" level="INFO">${nome_cidade_uf} = Quixadá/CE</msg>
+<status status="PASS" starttime="20231008 15:03:01.658" endtime="20231008 15:03:01.665"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${nome_cidade_uf}</arg>
+<arg>${registro.cidade_uf}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231008 15:03:01.665" endtime="20231008 15:03:01.665"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231008 15:03:04.666" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231008 15:03:01.665" endtime="20231008 15:03:04.666"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.link_cuidar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:03:04.666" endtime="20231008 15:03:04.675"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cadastro.link_cuidar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231008 15:03:04.676" level="INFO">Clicking element 'xpath://li[contains(.,'Cuidar')]'.</msg>
+<status status="PASS" starttime="20231008 15:03:04.675" endtime="20231008 15:03:04.892"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${cadastro.botao_anexar}</arg>
+<arg>${cadastro.caminho_doc}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20231008 15:03:04.893" level="INFO">Sending C:\Users\Gledson Nascimento\Documents\projetos\robot-framework\walkdog_robot\cnh-teste.jpg to browser.</msg>
+<status status="PASS" starttime="20231008 15:03:04.892" endtime="20231008 15:03:04.901"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cadastro.botao_cadastrar}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231008 15:03:04.901" endtime="20231008 15:03:04.909"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cadastro.botao_cadastrar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231008 15:03:04.909" level="INFO">Clicking element 'xpath://button[@class='button-register']'.</msg>
+<status status="PASS" starttime="20231008 15:03:04.909" endtime="20231008 15:03:05.125"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231008 15:03:07.126" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231008 15:03:05.125" endtime="20231008 15:03:07.126"/>
+</kw>
+<status status="PASS" starttime="20231008 15:02:56.236" endtime="20231008 15:03:07.126"/>
+</kw>
+<kw name="ENTÃO devo ver uma mensagem de sucesso informando Recebemos o seu cadastro e em breve retornaremos o contato" library="cadastro_page">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${cadastro.campo_mensagem}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231008 15:03:07.136" level="INFO">Element 'xpath://div[@class="swal2-html-container"]' is displayed.</msg>
+<status status="PASS" starttime="20231008 15:03:07.126" endtime="20231008 15:03:07.136"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Recebemos o seu cadastro e em breve retornaremos o contato</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231008 15:03:07.139" level="INFO">Current page contains text 'Recebemos o seu cadastro e em breve retornaremos o contato'.</msg>
+<status status="PASS" starttime="20231008 15:03:07.136" endtime="20231008 15:03:07.139"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>cadastro_dog_walker_success.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231008 15:03:07.173" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="cadastro_dog_walker_success.png"&gt;&lt;img src="cadastro_dog_walker_success.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231008 15:03:07.139" endtime="20231008 15:03:07.173"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231008 15:03:07.173" endtime="20231008 15:03:09.781"/>
+</kw>
+<status status="PASS" starttime="20231008 15:03:07.126" endtime="20231008 15:03:09.781"/>
+</kw>
+<status status="PASS" starttime="20231008 15:02:49.810" endtime="20231008 15:03:09.781"/>
+</test>
+<status status="PASS" starttime="20231008 15:02:49.625" endtime="20231008 15:03:09.782"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cadastro">Cadastro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
